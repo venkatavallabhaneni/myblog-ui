@@ -12,6 +12,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { HomeComponent } from './components/home/home.component';
 import { NoPageComponent } from './components/no-page/no-page.component';
 import { HttpErrorInterceptor } from './shared/errors/app.http.error';
+import { EducationComponent } from './components/education/education.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpErrorInterceptor } from './shared/errors/app.http.error';
     AboutComponent,
     ExperienceComponent,
     HomeComponent,
-    NoPageComponent],
+    NoPageComponent,
+    EducationComponent],
   imports: [
     CommonModule,
     BrowserModule,

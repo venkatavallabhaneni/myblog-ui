@@ -6,5 +6,6 @@ import { homeRoutes } from './components/home/home.router';
 import { aboutRoutes } from './components/about/about.router';
 import { experienceRoutes } from './components/experience/experience.router';
 import { noPageRoutes } from './components/no-page/nopage.router';
+import { educationRoutes } from './components/education/education.router';
 
-export const routes: Route[] = [...homeRoutes, ...aboutRoutes, ...experienceRoutes, ...noPageRoutes];
+export const routes: Route[] = [...homeRoutes, ...aboutRoutes, ...experienceRoutes, ...educationRoutes, ...noPageRoutes];

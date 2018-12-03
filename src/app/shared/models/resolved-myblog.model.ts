@@ -2,8 +2,10 @@ import { MyBlog } from './MyBlog.model';
 
 export class MyBlogResolved {
 
-   public myblog: MyBlog;
-   public error: any = null;
+    myblog: MyBlog;
+    error: any = null;
 
-    constructor(myblog, error) { }
+    constructor(myblog, error) { this.myblog = myblog; this.error = error; }
 }
+
+

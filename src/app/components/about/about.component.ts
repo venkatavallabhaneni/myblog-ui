@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MyBlogResolverService } from 'src/app/my-blog-resolver.service';
 import { MyBlog } from 'src/app/shared/models/MyBlog.model';
 import { MyBlogResolved } from 'src/app/shared/models/resolved-myblog.model';
@@ -16,14 +16,16 @@ export class AboutComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
   ngOnInit() {
+
+
     const resolvedData: MyBlogResolved = this.route.snapshot.data['about'];
-    console.log(resolvedData);
-    if (resolvedData != null && resolvedData.error == null) {
+
+    if (resolvedData != null && resolvedData.myblog != null) {
       this.aboutData = resolvedData.myblog;
-      console.log('Venkat3 :: ' + this.error);
     } else {
+      console.log('Venkat 67' + resolvedData);
       this.error = resolvedData.error;
-      console.log('Venkat3 :: ' + this.error);
+
     }
   }
 
