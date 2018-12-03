@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MyBlogRestService } from 'src/app/myblog.service';
 import { ActivatedRoute } from '@angular/router';
 import { MyBlogResolverService } from 'src/app/my-blog-resolver.service';
 import { MyBlog } from 'src/app/shared/models/MyBlog.model';
+import { MyBlogResolved } from 'src/app/shared/models/resolved-myblog.model';
 
 @Component({
   selector: 'app-about',
@@ -12,15 +12,18 @@ import { MyBlog } from 'src/app/shared/models/MyBlog.model';
 })
 export class AboutComponent implements OnInit {
   aboutData: MyBlog;
-  error: MyBlog | String;
+  error: any;
 
   constructor(private route: ActivatedRoute) { }
   ngOnInit() {
-    const resolvedData: MyBlog | String = this.route.snapshot.data['about'];
-    if (resolvedData != null && resolvedData instanceof MyBlog) {
-      this.aboutData = resolvedData;
+    const resolvedData: MyBlogResolved = this.route.snapshot.data['about'];
+    console.log(resolvedData);
+    if (resolvedData != null && resolvedData.error == null) {
+      this.aboutData = resolvedData.myblog;
+      console.log('Venkat3 :: ' + this.error);
     } else {
-      this.error = resolvedData;
+      this.error = resolvedData.error;
+      console.log('Venkat3 :: ' + this.error);
     }
   }
 

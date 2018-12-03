@@ -23,18 +23,7 @@ export class MyBlogRestService {
   constructor(private httpClient: HttpClient) { }
   getContentByCategory(category): Observable<MyBlog> {
     return this.httpClient.get<MyBlog>(environment.apiUrl + '/' + environment.apiContentPath + '/' + category,
-      httpOptions).pipe(catchError(this.handleErrors ));
-  }
-
-  private handleErrors(errorResponse: HttpErrorResponse) {
-
-    if (errorResponse.error instanceof ErrorEvent) {
-      console.error('Client side Error', errorResponse.error.message);
-    } else {
-      console.error('Server side Error', errorResponse);
-    }
-    return throwError('Some error please try again', errorResponse.error);
-
+      httpOptions);
   }
 }
 
