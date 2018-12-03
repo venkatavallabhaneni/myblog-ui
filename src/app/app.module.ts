@@ -13,6 +13,10 @@ import { HomeComponent } from './components/home/home.component';
 import { NoPageComponent } from './components/no-page/no-page.component';
 import { HttpErrorInterceptor } from './shared/errors/app.http.error';
 import { EducationComponent } from './components/education/education.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { InterestsComponent } from './components/interests/interests.component';
+import { AwardsComponent } from './components/awards/awards.component';
+import { MyblogComponent } from './components/myblog/myblog.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { EducationComponent } from './components/education/education.component';
     ExperienceComponent,
     HomeComponent,
     NoPageComponent,
-    EducationComponent],
+    EducationComponent,
+    SkillsComponent,
+    InterestsComponent,
+    AwardsComponent,
+    MyblogComponent],
   imports: [
     CommonModule,
     BrowserModule,
