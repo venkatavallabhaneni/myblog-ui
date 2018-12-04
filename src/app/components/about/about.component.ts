@@ -20,6 +20,7 @@ export class AboutComponent implements OnInit {
 
     const resolvedData: MyBlogResolved = this.route.snapshot.data['about'];
 
+    console.log('Venkat 66' + resolvedData);
     if (resolvedData != null && resolvedData.myblog != null) {
       this.aboutData = resolvedData.myblog;
     } else {

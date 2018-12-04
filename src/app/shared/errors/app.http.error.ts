@@ -19,6 +19,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
                     if (error.error instanceof ErrorEvent) {
                         // client-side error
                         errorMessage = `Client side Error: ${error.error.message}`;
+                        console.log('Venkat 1 ::' + errorMessage);
                     } else {
                         // server-side error
                         errorMessage = `Server side Error Code: ${error.status}\nMessage: ${error.message}`;
