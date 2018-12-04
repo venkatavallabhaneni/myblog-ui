@@ -13,5 +13,4 @@ import { interestsRouter } from './components/interests/interests.router';
 import { myblogRouter } from './components/myblog/myblog.router';
 
 export const routes: Route[] = [...homeRoutes, ...aboutRoutes,
-...experienceRoutes, ...educationRoutes, ...skillsRoutes, ...awardsRouter,
-...interestsRouter, ...myblogRouter, ...noPageRoutes];
+...experienceRoutes, ...educationRoutes,  ...skillsRoutes, ...interestsRouter,  ...awardsRouter, ...myblogRouter,  ...noPageRoutes];

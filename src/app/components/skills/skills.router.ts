@@ -5,7 +5,7 @@ import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from './skills.component';
 export const skillsRoutes: Route[] = [
        {
-              path: '', component: SkillsComponent,
+              path: 'skills', component: SkillsComponent,
               data: { 'category': 'ski' }, resolve: { skills: MyBlogResolverService }
        }
 
