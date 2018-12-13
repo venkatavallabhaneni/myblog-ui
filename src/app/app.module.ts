@@ -17,6 +17,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { InterestsComponent } from './components/interests/interests.component';
 import { AwardsComponent } from './components/awards/awards.component';
 import { MyblogComponent } from './components/myblog/myblog.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { MyProfileResolverService } from './components/profile/profile.resolver';
 
 
 @NgModule({
@@ -30,14 +32,15 @@ import { MyblogComponent } from './components/myblog/myblog.component';
     SkillsComponent,
     InterestsComponent,
     AwardsComponent,
-    MyblogComponent],
+    MyblogComponent,
+    ProfileComponent],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [MyBlogRestService, MyBlogResolverService, {
+  providers: [MyBlogRestService, MyBlogResolverService, MyProfileResolverService, {
     provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
     multi: true,

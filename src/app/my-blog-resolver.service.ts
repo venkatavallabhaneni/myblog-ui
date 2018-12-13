@@ -17,4 +17,6 @@ export class MyBlogResolverService implements Resolve<MyBlogResolved> {
     return this.myblogRestServic.getContentByCategory(category).pipe(
       map((myblogdata) => new MyBlogResolved(myblogdata, catchError((error: any) => of(new MyBlogResolved(null, error))))));
   }
+
+
 }

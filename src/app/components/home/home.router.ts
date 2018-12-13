@@ -1,11 +1,10 @@
 import { Route } from '@angular/router';
-import { HomeComponent } from '../home/home.component';
-import { MyBlogResolverService } from 'src/app/my-blog-resolver.service';
-import { AboutComponent } from '../about/about.component';
+import { ProfileComponent } from '../profile/profile.component';
+import { MyProfileResolverService } from '../profile/profile.resolver';
 export const homeRoutes: Route[] = [
        {
-              path: '', component: AboutComponent,
-              data: { 'category': 'abou' }, resolve: { about: MyBlogResolverService }
+              path: '', component: ProfileComponent, data: { 'categories': 'about,experience,education,skills,interests,awards' },
+              resolve: { profile: MyProfileResolverService }
        }
 
 ];

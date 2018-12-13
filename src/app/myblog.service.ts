@@ -24,6 +24,12 @@ export class MyBlogRestService {
     return this.httpClient.get<MyBlog>(environment.apiUrl + '/' + environment.apiContentPath + '/' + category,
       httpOptions);
   }
+
+  getProfileContent(categories): Observable<MyBlog[]> {
+
+    return this.httpClient.get<MyBlog[]>(environment.apiUrl + '/' + environment.apiContentPath + '/' + categories,
+      httpOptions);
+  }
 }
 
 
